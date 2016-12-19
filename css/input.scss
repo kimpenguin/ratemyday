@@ -1,0 +1,148 @@
+$default-black: #191d1f;
+$default-green: #0d7b7b;
+body{
+	margin: 0 auto;
+}
+.center{
+	text-align: center;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.row{
+	margin: 0;
+}
+.page-header{
+	background: $default-black;
+	color: white;
+	margin: 0;
+	padding: 20px 0;
+	h1{
+		margin: 0;
+	}
+}
+button{
+	background-color: $default-green;
+	color:white;
+	border-radius: 4px;
+	height: 30px;
+	border: 2px solid $default-green;
+	min-width:70px;
+	&:hover{
+		background-color:$default-black;
+		border: 2px solid $default-black;
+	}
+}
+.active{
+	background-color: $default-black;
+	border: 2px solid $default-black;
+}
+// ****************************
+// main chart
+#chart-header{
+	padding-top: 15px;
+	.col-xs-12{
+		padding: 0;
+	}
+	.col-xs-3{
+		padding:0;
+		margin-right: 0;
+	}
+	.col-xs-6{
+		padding:0;
+	}
+	h3{
+		margin-top: 0;
+	}
+}
+#chart{
+	z-index: 0;
+	svg{
+		width: 100%;
+	}
+}
+#chart-area{
+	padding: 0;
+}
+// ****************************
+/*navigation chart*/
+.nav-x-axis path,
+.nav-x-axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.nav-x-axis-secondary path{
+  fill: none;
+}
+.nav-x-axis-secondary line {
+  fill: none;
+  stroke: #000;
+}
+
+.area {
+  fill: lightgray;
+}
+.y-title{
+	margin:-20px;
+}
+/*end navigation chart*/
+// ****************************
+/*data table*/
+.data-view{
+	padding: 20px 15px;
+	margin-bottom:20px;
+	// overflow:hidden;
+	.col-xs-6{
+		min-width: 450px;
+	}
+	#description{
+		p{
+			font-size: 16px;
+		}
+	}
+	#data-table{
+		height: 250px;
+		overflow-y: scroll;
+		.col-xs-3{
+			padding: 0;
+		}
+		&::-webkit-scrollbar { 
+	    display: none; 
+		}
+	}
+	.data-col-title{
+		display:inline-block;
+		background-color: $default-black;
+		height:30px;
+		color: white;
+		text-align: center;
+		width: 100%;
+		padding-top: 5px;
+	}
+	.table{
+		display:block;
+		text-align:center;
+		margin: 0;
+		padding: 5px;
+		border-right: 1px $default-black solid;
+		border-bottom: 1px dashed $default-black;
+	}
+
+}
+// ****************************
+
+
+/*Calendar related*/
+#selectday{
+	display: none;
+	margin-right:0;
+}
+
+.data-view{
+	display: none;
+}

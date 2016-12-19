@@ -1,0 +1,88 @@
+<html>
+<head>
+  <title>Rate My Day</title>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/clndr.js"></script>
+  <script src="js/underscore-min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- reference Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/clndr.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- header -->
+	<div class="page-header">
+	  <h1 class="center">Rate My Day</h1>
+	</div>
+
+
+	<div class="row">
+		 <div class="col-xs-12" id="chart-header">
+			  <!-- links to see different time frames -->
+		  	<div class="col-xs-3 options">
+		      <button id="alldata">All Data</button>
+		      <button id="shortterm">10-Days</button>
+		      <button id="longterm">30-Days</button>
+		  	</div>
+		  	<div class="col-xs-6">
+		    	<h3 class="center" id="date-range"></h3>
+		  	</div>
+		  	<div class="col-xs-3">
+		      <button id="selectday" class="right">Select Start Day</button>
+		  	</div>
+		    	<!-- calendar -->
+		    <div class="col-xs-12" >
+		      <div id="calendar" class="right"></div>
+		    </div>
+	    </div>
+	</div>
+
+  <!-- load the chart -->
+  <div class="row">
+    <div class="col-xs-12" id="chart-area">
+      <div id="chart"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 center" id="directions">
+      <h2>A visual representation of how I rate my days.</h2>
+    </div>
+  </div>
+	  <div class="data-view">
+	    <div class="col-xs-6" id="description">
+	      <p>The two charts above are representations of the difference between what I predicted my rating would be that morning and what it actually was at the end of the day. I rate my days on a scale from 1 to 10 with 1 being crappy and 10 being awesome-sauce!</p> 
+	      <p>The filled blue bars represent days that resulted in predicted rating above the actual rating. The empty bars represent the predicted rating below the actual rating. The table on the right shows each data point graphed above.</p>
+	    </div>
+	    <div class="col-xs-6" id="data-table">
+	      <div class="row">
+	        <div class="col-xs-3" >
+		        <div class="data-col-title">Date</div>
+		        <div id="data-date"></div>
+		      </div>
+		      <div class="col-xs-3" >
+		        <div class="data-col-title">Predicted</div>
+		        <div id="data-forecast"></div>
+		      </div>
+		      <div class="col-xs-3" >
+		        <div class="data-col-title">Actual</div>
+		        <div id="data-actual"></div>
+		      </div>
+		      <div class="col-xs-3" >
+		        <div class="data-col-title">Error</div>
+		        <div  id="data-error"></div>
+		      </div>
+	      </div>
+	    </div>
+	  </div>
+</body>
+</html>
